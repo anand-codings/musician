@@ -1,0 +1,417 @@
+/*********************************** 
+            Seach Header
+***********************************/
+.header {
+    &.show {
+        .s_timeline {
+            @media #{$query767} {
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.s_timeline {
+    position: relative;
+    padding-right: 60px;
+    @include transition(all 0.35s ease-in-out 0s);
+
+    @media #{$query767} {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0%;
+        z-index: 10;
+        padding: 0 45px 0 35px;
+        margin: -20px auto 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .dropdown-toggle {
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f078";
+            font-size: 12px;
+            border: 0px;
+            margin-top: 3px;
+            margin-right: -6px;
+        }
+    }
+
+    .bootstrap-select {
+        >.dropdown-toggle {
+            @include borderRadius(0px);
+            height: 40px;
+            border-right: 1px solid #b6b6b6;
+            padding: .500rem 1.5rem .500rem 0.7rem;
+            background: #f6f6f6;
+        }
+
+        .dropdown-toggle {
+            &:focus {
+                outline: none !important;
+                box-shadow: none !important;
+                -moz-box-shadow: none !important;
+                -webki-box-shadow: none !important;
+                -ms-box-shadow: none !important;
+            }
+
+            .filter-option-inner {
+                padding-right: 0px;
+            }
+        }
+
+        &:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 135px;
+        }
+    }
+
+    .bootstrap-select>.dropdown-toggle.bs-placeholder,
+    .bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+    .bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+    .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+        color: $black_coal;
+    }
+
+    .search_options {
+        input[type="text"] {
+            border: 1px solid #cccccc;
+
+            &:focus {
+                border: 1px solid #222;
+            }
+        }
+    }
+
+    .select_fields {
+        @media #{$query991} {
+            display: none;
+        }
+    }
+
+    .language_select {
+        .bootstrap-select {
+            >.dropdown-toggle {
+                border-right: 0px;
+            }
+
+            &:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+                width: 120px;
+            }
+        }
+    }
+
+    .specialization_select {
+        .bootstrap-select {
+            >.dropdown-toggle {
+                @include borderRadius(7px 0 0 7px);
+            }
+        }
+    }
+
+    input[type="text"] {
+        border: 0px;
+        font-size: 15px;
+        width: 520px;
+        padding: 0 10px;
+        height: 40px;
+        max-width: 100%;
+
+        @media #{$query991} {
+            @include borderRadius(7px 0 0 7px);
+        }
+
+        @media #{$query1600} {
+            width: 470px;
+        }
+
+        @media #{$query991} {
+            width: 300px;
+        }
+
+        @media #{$query767} {
+            width: 100%;
+        }
+    }
+
+    .search_input {
+        position: relative;
+
+        @media #{$query767} {
+            width: 100%;
+        }
+
+        &.search_page {
+            input[type="text"] {
+                @include borderRadius(7px 0 0 7px);
+            }
+        }
+
+        .clear_form {
+            color: $pink_medium;
+            font-size: 12px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -10px;
+            background-color: transparent;
+            border: 0px;
+            display: none;
+        }
+    }
+
+    .submit_btn {
+        background: #b62e65;
+        right: 0px;
+        top: 0px;
+        border: 0px;
+        color: $white;
+        height: 40px;
+        width: 60px;
+        text-align: center;
+        position: absolute;
+        cursor: pointer;
+        @include borderRadius(0 7px 7px 0);
+    }
+
+    .search_back {
+        position: absolute;
+        top: 50%;
+        margin-top: -13px;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 999;
+        display: none;
+        left: 12px;
+        color: $white;
+
+        @media #{$query767} {
+            display: block;
+        }
+    }
+}
+
+.categories_select {
+    .btn {
+        background: #f6f6f6;
+        @include borderRadius(0px);
+        height: 40px;
+        padding: .500rem 1.5rem .500rem 0.7rem;
+        border-right: 1px solid #b6b6b6;
+        color: #181818;
+
+        &:after {
+            margin-top: 3px;
+            margin-left: 15px;
+            float: right;
+        }
+    }
+
+    .dropdown-menu {
+        min-width: 220px;
+    }
+
+    .tab-pane {
+        ul {
+            font-size: 14px;
+            max-height: 160px;
+            overflow: auto;
+        }
+    }
+}
+
+.search_icons {
+    background-image: url('../../images/icons/icon-search-white.svg');
+    width: 19px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#musician_data_list .btn_message {
+    border: 1px solid #7b277c;
+}
+
+/*********************************** 
+            Seach Homepage 
+***********************************/
+.s_home {
+    width: 100%;
+    @include borderRadius(50px);
+    background: $white;
+    position: relative;
+    padding-right: 150px;
+    margin: 40px auto;
+    max-width: 850px;
+
+    @media #{$query991} {
+        padding: 0 45px 0 15px;
+    }
+
+    @media #{$query991} {
+        margin: 25px auto;
+    }
+
+    @media #{$query479} {
+        padding: 0px;
+        background: transparent;
+    }
+
+    .search_input {
+        float: left;
+        width: 50%;
+
+        @media #{$query479} {
+            float: none;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+
+    input[type="text"] {
+        height: 50px;
+
+        @media #{$query767} {
+            height: 45px;
+        }
+    }
+
+    input[type="text"] {
+        border: 0px;
+        font-size: 15px;
+        width: 100%;
+        @include borderRadius(50px);
+        padding: 0 20px;
+
+        @media #{$query479} {
+            @include borderRadius(0px);
+        }
+    }
+
+    .search_options {
+        float: left;
+        width: 50%;
+        position: relative;
+
+        label#cat-error {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            top: 16px;
+            bottom: 0;
+            font-size: 12px;
+            right: 10px;
+        }
+
+        @media #{$query479} {
+            float: none;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .select2-selection__arrow{
+            display:none;
+        }
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 50px;
+        border: 0px;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        border-right: 1px solid;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 0.9rem 0.7rem;
+
+        @media #{$query576} {
+            @include borderRadius(0px);
+        }
+
+        @media #{$query767} {
+            height: 45px;
+            padding: 0.7rem 0.7rem;
+        }
+
+        .select2-selection__arrow {
+            display: none;
+        }
+
+        .select2-selection__rendered {
+            color: #000;
+        }
+    }
+
+    button {
+        background: #27bcc2;
+        border: 0px;
+        color: $white;
+        @include borderRadius(45px);
+        height: 40px;
+        width: 135px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+
+        @media #{$query991} {
+            width: 50px;
+            height: 50px;
+            padding: 0px;
+            right: 0px;
+            top: 0px;
+        }
+
+        @media #{$query767} {
+            width: 45px;
+            height: 45px;
+        }
+
+        @media #{$query479} {
+            @include borderRadius(0px);
+            top: unset;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+            width: 80px;
+            height: 45px;
+            border-radius: 25px !important;
+        }
+
+        span {
+            @media #{$query991} {
+                display: none;
+            }
+        }
+
+        .search_icons {
+            background-image: url('../../images/icons/icon-search-white.svg');
+            width: 19px;
+            height: 19px;
+            background-repeat: no-repeat;
+            background-position: center top;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+
+            @media #{$query991} {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+ .search_options {
+        .select2-selection__arrow{
+            display:none;
+        }
+    }

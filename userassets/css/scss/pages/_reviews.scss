@@ -1,0 +1,207 @@
+.musician_reviews_listing {
+    margin-bottom: 35px;
+    .review_wrap {
+        margin-bottom: 15px;
+    }
+    .review_header {
+        background-image: url('../../images/event_bg.jpg');
+        position: relative;
+        .overlay {
+            padding: 15px 20px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .image {
+            .bg_image_round {
+                width: 85px;
+                height: 85px;
+                margin-right: 15px;
+                @media #{$query767} {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+        .title {
+            h3 {
+                color: $white;
+                font-weight: 800;
+                @media #{$query767} {
+                    font-size: 23px;
+                }
+            }
+            span {
+                color: $white;
+                font-weight: 300;
+            }
+
+        }
+    }
+    .review_body {
+        background-color: $white;
+        padding: 15px 20px;
+        .meta {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+.review_body {
+    color: #181818;
+}
+.reviews_list {
+    > li {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        border-bottom: 1px solid #f0f2ef;
+        &:last-child {
+            border-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        .txt-20 {
+            margin-bottom: -4px;
+            display: block;
+        }
+    }
+    li {
+        .bg_image_round {
+            width: 50px;
+            height: 50px;
+            margin-right: 12px;
+        }
+        .u_name {
+            font-size: 18px;
+            color: #11365a;
+            font-weight: bold;
+        }
+    }
+    .review_header {
+        margin-bottom: 10px;
+    }
+    .rating_reviews {
+        color: #969696;
+    }
+    .review_share {
+        margin-left: 15px;
+        i {
+            margin-right: 4px;
+        }
+    }
+}
+.star-ratings-sprite {
+    background: url("../../images/star-rating-sprite.png") repeat-x;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    height: 15px;
+    width: 75px;
+    background-size: 15px auto;
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+.star-ratings-sprite-rating {
+    background: url("../../images/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;    
+    height: 15px;
+    background-size: 15px auto;
+    display:block;
+}
+.star-ratings-sprite-gray {
+    background: url("../../images/star-rating-sprite-gray.png") repeat-x;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    height: 15px;
+    width: 75px;
+    background-size: 15px auto;
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+.star-ratings-sprite-rating-gray {
+    background: url("../../images/star-rating-sprite-gray.png") repeat-x;
+    background-position: 0 100%;    
+    height: 15px;
+    background-size: 15px auto;
+    display:block;
+}
+.average_rating {
+    width: 30%;
+    @media #{$query1199} {
+        width: 25%;
+    }
+    @media #{$query576} {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .rating {
+        font-size: 59px;
+        font-weight: 600;
+        color: #181818;
+        display: block;
+        line-height: 47px; 
+        margin-bottom: 3px;
+    }
+    .reviews {
+        display: block;
+    }    
+}
+.rating_progress {
+    width: 100%;
+    > div {
+        margin-bottom: 3px;
+    }
+    .rating_stars {
+        width: 36%;
+        @include flex();
+        @include align-items(center);
+
+        @media #{$query1199} {
+            width: 43%;
+        }
+        @media #{$query991} {
+            width: 220px;
+        }
+        @media #{$query767} {
+            width: 269px;
+        }
+        @media #{$query479} {
+            width: 168px;
+        }
+    }
+    .progress_bar {
+        width: 100%;
+        @include flex();
+        .num {
+            margin-left: 5px;
+            float: left;
+        }
+    }
+    .progress {
+        height: 10px;
+        background-color: #58248a;
+        width: 100%;
+        @include borderRadius(10px);
+        margin-top: 7px;
+    }
+}
+.rating_stars {
+    .star_label {
+        float: left;
+        font-weight: 600;
+        margin-right: 5px;
+
+        @media #{$query479} {
+            display: none;
+        }
+
+    }
+    .rating_reviews {
+        padding-left: 3px;
+    }
+}

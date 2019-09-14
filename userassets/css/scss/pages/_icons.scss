@@ -1,0 +1,231 @@
+.s_icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.icon-facebook {
+    background-image: url('../../images/icons/icon-facebook.svg');
+    width: 22px;
+    height: 24px;
+    display: inline-block;
+    background-size: 100% 100%;
+    vertical-align: top;
+    margin: 2px 6px 0 0;
+}
+.icon-googleplus {
+    background-image: url('../../images/icons/icon-google.svg');
+    width: 20px;
+    height: 23px;
+    display: inline-block;
+    background-size: 100% 100%;
+    vertical-align: top; 
+    margin: 2px 6px 0 0;
+}
+.icon-group {
+    background-image: url('../../images/icons/icon-groups.svg');    
+}
+.icon-tstudio {
+    background-image: url('../../images/icons/icon-teachingstudio.svg');    
+}
+.ic_follow {
+    background-image: url('../../images/icons/icon-follow-white.svg');
+    width: 17px;
+    height: 18px;
+}
+.ic_follow.grey {
+    background-image: url('../../images/icons/icon-follow-grey.svg');
+}
+.btn_unfollow .ic_follow,
+.btn_following .ic_follow {
+    background-image: url('../../images/icons/icon-follow-white.svg');
+}
+.following.white .ic_follow {
+    background-image: url('../../images/icons/icon-follow-red.svg');
+}
+.ic_message {
+    background-image: url('../../images/icons/icon-message-black.svg');
+    width: 22px;
+    height: 18px;
+}
+.timeline_nav li.active .ic_message,
+.ic_message.white,
+.timeline_nav li:hover .ic_message {
+    background-image: url('../../images/icons/icon-message-white.svg');
+}
+.ic_timeline {
+    background-image: url('../../images/icons/icon-timeline-black.svg');
+    width: 19px;
+    height: 17px;
+}
+.ic_timeline.white,
+a.active .ic_timeline,
+a:hover .ic_timeline,
+.timeline_nav li.active .ic_timeline {
+    background-image: url('../../images/icons/icon-timeline-white.svg');
+}
+.ic_calender  {
+    background-image: url('../../images/icons/icon-calender-black.svg');
+    width: 17px;
+    height: 19px;
+}
+.ic_calender.white,
+a.active .ic_calender,
+a:hover .ic_calender,
+.timeline_nav li.active .ic_calender,
+.timeline_nav li:hover .ic_calender {
+    background-image: url('../../images/icons/icon-calender-white.svg');
+}
+.ic_media {
+    background-image: url('../../images/icons/icon-media-black.svg');
+    width: 17px;
+    height: 17px;
+}
+.ic_media.white,
+a.active .ic_media,
+a:hover .ic_media,
+.timeline_nav li.active .ic_media,
+.timeline_nav li:hover .ic_media  {
+    background-image: url('../../images/icons/icon-media-white.svg');
+}
+.ic_accompainst {
+    background-image: url('../../images/icons/icon-accompanist.svg');
+    width: 17px;
+    height: 17px;
+}
+.ic_accompainst_w {
+    background-image: url('../../images/icons/icon-accompanist-white.svg');
+    width: 17px;
+    height: 17px;
+}
+.ic_review {
+    background-image: url('../../images/icons/icon-review-black.svg');
+    width: 17px;
+    height: 17px;
+}
+.ic_review.white,
+a.active .ic_review,
+a:hover .ic_review,
+.timeline_nav li.active .ic_review {
+    background-image: url('../../images/icons/icon-review-white.svg');
+}
+.ic_music {
+    background-image: url('../../images/icons/icon-music-black.svg');
+    width: 18px;
+    height: 21px;
+}
+.ic_music.white,
+a.active .ic_music,
+a:hover .ic_music,
+.timeline_nav li.active .ic_music {
+    background-image: url('../../images/icons/icon-music-white.svg');
+}
+.ic_about {
+    background-image: url('../../images/icons/icon-about-black.svg');
+    width: 18px;
+    height: 19px;
+}
+.ic_about.white,
+a.active .ic_about,
+a:hover .ic_about,
+.timeline_nav li.active .ic_about {
+    background-image: url('../../images/icons/icon-about-white.svg');
+}
+.ic_booking {
+    background-image: url('../../images/icons/icon-booking-black.svg');
+    width: 18px;
+    height: 20px;
+}
+.ic_booking.white,
+a.active .ic_booking,
+a:hover .ic_booking,
+.timeline_nav li.active .ic_booking {
+    background-image: url('../../images/icons/icon-booking-white.svg');
+}
+.ic_bookmark {
+    background-image: url('../../images/icons/icon-bookmark-black.svg');
+    width: 14px;
+    height: 19px;
+}
+.ic_bookmark.white,
+a.active .ic_bookmark,
+a:hover .ic_bookmark,
+.timeline_nav li.active .ic_bookmark {
+    background-image: url('../../images/icons/icon-bookmark-white.svg');
+}
+.icon-bookmarks {
+    background-image: url('../../images/icons/icon-favourite.svg');
+}
+.icon-events {
+    background-image: url('../../images/icons/icon-event.svg');
+}
+.ic_addphoto {
+    background-image: url('../../images/icons/icon-addphoto.svg');
+}
+.ic_addvideo {
+    background-image: url('../../images/icons/icon-addvideo.svg');
+}
+.ic_addmusic {
+    background-image: url('../../images/icons/icon-addmusic.svg');
+}
+.ic_createevent {
+    background-image: url('../../images/icons/icon-createevent.svg');
+}
+.timeline_nav .ic_message {
+    margin-top: 3px;
+}
+.icon_search {
+    background-image: url('../../images/icons/icon-search.svg'); 
+    width: 16px;
+    height: 16px;
+}
+.icon_current_location {
+    background-image: url('../../images/icons/current_location.png'); 
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -8px;
+    cursor: pointer;
+}
+.icon_camera {
+    background-image: url('../../images/icons/icon-camera.svg'); 
+    width: 20px;
+    height: 17px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    margin: 3px 3px 0px 0px;
+}
+.iconback {
+    background-image: url('../../images/icons/icon-back.png'); 
+    width: 26px;
+    height: 15px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.arrow_divider {
+    background-image: url('../../images/arrow_right.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 27px;
+    height: 60px;
+    background-size: contain;
+    margin-top: 5px;
+}
+.image_download_btn {
+    background-image: url('../../images/icons/icon-download.png');
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}

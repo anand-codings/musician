@@ -1,0 +1,168 @@
+.followers_list {
+    li {
+        border-bottom: 1px solid #dbdbdb;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        .u_name {
+            font-size: 18px;
+            color: #11365a;
+            font-weight: bold;
+        }
+        .profession {
+            font-size: 15px;
+            color: #ff0000;
+            margin-top: -4px;
+        }
+        > .media > img {
+            width: 50px;
+            height: 50px;
+            margin-right: 8px;
+        }
+    }
+}
+.group_members_list {
+    margin-bottom: 20px;
+    li {
+        margin-right: 3px;
+        img {
+            width: 38px;
+            height: 38px;
+        }
+    }
+}
+.group_body hr {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+.add_member_field {
+    border: 0px;    
+    border-bottom: 1px solid #ccc;
+    &.ui-state-active {
+        border: 0px;    
+        border-bottom: 1px solid #ccc;
+        background: #f3f3f3;
+        margin: 0px;
+    }
+    h4 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        color: #333333;
+    }
+    .image {
+        margin-right: 10px;
+    }
+}
+.group_suggestion_list {
+    li {
+        padding: 5px 0px 8px 0px;
+        border-bottom: 1px solid #e7e7e7;
+        a {
+            font-weight: bold;
+            color: #11365a;
+        }
+    }
+    .group_img {
+        margin-right: 10px;
+    }
+}
+.groups_joined a {
+    color: #181818;
+    &:hover {
+        color: #b62e65;
+    }
+}
+.group_cover_photo {
+    min-height: 360px;
+    width: 100%;
+    background-image: url('../../images/gradient_cover_photo_bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0px 90px 0px;
+    background-repeat: no-repeat;
+    @media #{$query991} {
+        min-height: 270px;
+    }
+    @media #{$query767} {
+        min-height: 220px;
+    }
+    @media #{$query479} {
+        min-height: 190px;
+    }
+}
+.group_members {
+    margin-top: -1.5px;
+    @media #{$query767} {
+        margin: 10px 0px;
+    }    
+    li {
+        position: relative;
+        margin-right: 0.2rem;
+        display: inline-block;
+        img {
+            width: 43px;
+            height: 43px;
+        }
+    }
+    i {
+        position: absolute;
+        right: -3px;
+        top: -3px;
+        color: #f00;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}
+.invite_group_scollarea {
+    overflow: auto;
+    max-height: 232px;
+    background-color: #fff;
+}
+.invite_group_user {
+    padding: 7px;
+    background-color: $white;
+    @media #{$query767} {
+        margin: 10px 0px;
+    }
+    li {
+        border-bottom: 1px solid #f0f2ef;
+        margin-bottom: 7px;
+        &:last-child {
+            border-bottom: 0px solid #dadada;
+            margin-bottom: 0px;
+            a {
+                padding: 0px;
+            }
+        }
+        a {
+            padding: 0px 0 5px 0;
+            color: $black;
+            .u_name {
+                font-weight: bold;
+            }
+            .invite_btn {
+                display: inline-block;
+                padding: 5px 13px;
+                background: $purple;
+                @include borderRadius(4px);
+                color: #fff;
+            }
+        }
+    }
+}
+.invite_search_form {
+    border-bottom: 1px solid #f0f2ef;
+    .btn {
+        padding: .5rem 1rem;
+        font-size: 14px;
+        background: $pink_medium;
+        color: $white;
+    }
+    .form-control {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,95 @@
+.followers_sidebar {
+    background-color: #fff;
+    padding-bottom: 50px;
+    height: 100%;
+
+    @media #{$query991} {
+        height: inherit;
+        margin-bottom: 30px;
+    }
+
+    .banner {
+        height: 150px;
+        background-size: cover;
+        position: relative;
+        :before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: rgba(0,0,0,0.6);
+        }
+    }
+    .info {
+        text-align: center;
+        .profile_pic {
+            margin-bottom: 10px;
+            position: relative;
+            margin-top: -55px;
+            .bg_image_round {
+                width: 110px;
+                height: 110px;
+            }
+        }
+        .following_status {
+            margin-top: 25px;
+        }
+    }
+}
+.label_filter {
+    width: 95px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #11365a;
+}
+.following_status {
+    > a {
+        display: inline-block;
+        margin-left: 3px;
+        @include borderRadius( 6px );
+
+        padding: .4rem 0.8rem .3rem 0.8rem;
+        font-size: 14px;
+        min-height: 35px;
+        vertical-align: top;
+
+        @media #{$query479} {
+            font-size: 13px;
+            padding: .4rem 0.6rem .3rem 0.6rem;
+            margin-left: 0px;
+        }
+
+
+    }
+    > .btn_follow {
+        border: 1px solid #353535;
+        color: #353535;
+        .ic_follow {
+            width: 14px;
+            height: 18px;    
+        }
+    }
+    > .btn_message {
+        background: linear-gradient(-58deg, #b62e65 19%, #58248a 100%);
+        background: -moz-linear-gradient(-58deg, #b62e65 19%, #58248a 100%);
+        background: -webkit-linear-gradient(-58deg, #b62e65 19%, #58248a 100%);
+        background: -o-linear-gradient(-58deg, #b62e65 19%, #58248a 100%);
+        background: -ms-linear-gradient(-58deg, #b62e65 19%, #58248a 100%);
+        color: $white;
+        .ic_message {
+            width: 18px;
+            height: 18px;    
+        }
+    }
+    > .btn_unfollow {
+        background: #d62432;
+        color: $white;
+    }
+    > .btn_following {
+        background: #707070;
+        color: $white;
+        border: 1px solid #707070;    
+    }
+}

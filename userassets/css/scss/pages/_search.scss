@@ -1,0 +1,500 @@
+.opensearch {
+    .search_sidebar {
+        @media #{$query991} {
+            left: 0%;
+        }
+    }
+}
+
+.search_sidebar {
+    background-color: $white;
+    padding: 0 15px 0px 15px;
+    @include transition(left 0.45s ease-in-out);
+
+    @media #{$query991} {
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 280px;
+        overflow: auto;
+        z-index: 10000;
+        left: -100%;
+    }
+
+    .search_side_header {
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fbfbfb+0,f6f6f6+100 */
+        background: rgb(251, 251, 251);
+        /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(251, 251, 251, 1) 0%, rgba(246, 246, 246, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(251, 251, 251, 1) 0%, rgba(246, 246, 246, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(251, 251, 251, 1) 0%, rgba(246, 246, 246, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#f6f6f6', GradientType=0);
+        /* IE6-9 */
+        margin: 0px -15px 0px -15px;
+        padding: 9px 15px;
+
+        h5 {
+            color: $blue_dark;
+            font-weight: 600;
+        }
+    }
+
+    .section {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: $blue_dark;
+            font-weight: 600;
+        }
+
+        .toggle_head {
+            border-bottom: 1px solid #e8e8e8;
+            position: relative;
+            cursor: pointer;
+
+            &.collapsed {
+                .icon {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+
+            .icon {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -6px;
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    background-color: #cccccc;
+                }
+
+                &:before {
+                    right: 0px;
+                    top: 50%;
+                    width: 10px;
+                    height: 2px;
+                    margin-top: -1px;
+                }
+
+                &:after {
+                    right: 50%;
+                    top: 0px;
+                    height: 10px;
+                    width: 2px;
+                    margin-right: -1px;
+                    display: none;
+                }
+            }
+        }
+
+        .toggle_body {
+            background: #f9f9f9;
+            padding: 10px;
+
+            input.select2-search__field {
+                width: 100% !important;
+            }
+
+            .select2-selection__choice {
+                max-width: 100%;
+                overflow: hidden;
+                word-wrap: normal !important;
+                white-space: normal
+            }
+        }
+    }
+}
+
+.slideup_search_wrap {
+    padding-bottom: 15px;
+}
+
+.search_field {
+    position: relative;
+    margin: 10px 0;
+
+    .icon_search {
+        position: absolute;
+        left: 13px;
+        top: 10px;
+    }
+
+    .form-control {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 35px;
+    }
+}
+
+.search_box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    max-height: 200px;
+    overflow: auto;
+
+    .custom-control {
+        margin-bottom: 2px;
+    }
+}
+
+.mobile_filter_btn {
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+    padding: 2px 10px 2px 10px;
+    @include borderRadius(5px);
+    float: right;
+    cursor: pointer;
+    vertical-align: top;
+    font-weight: bold;
+    display: none;
+    font-size: 15px;
+
+    @media #{$query991} {
+        display: block;
+    }
+
+    i {
+        width: 15px;
+        height: 16px;
+        background-image: url('../../images/icons/filter.svg');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: 7px;
+        margin-top: 4px;
+        vertical-align: top;
+    }
+}
+
+.records_founds {
+    font-size: 17px;
+    border-bottom: 1px solid #eaeae9;
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+    display: inline-block;
+    width: 100%;
+}
+
+.search_selected_options {
+    margin-bottom: 10px;
+
+    li {
+        display: inline-block;
+        margin-right: 1px;
+        margin-bottom: 6px;
+
+        a {
+            color: #414141;
+            font-size: 14px;
+        }
+    }
+}
+
+.search_selection {
+    color: #414141;
+    @include borderRadius(14px);
+    display: inline-block;
+    line-height: 18px;
+    padding: 4px 13px;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+
+    .selection_remove {
+        display: inline-block;
+        color: #ff0000;
+        font-size: 13px;
+        margin-left: 6px;
+        cursor: pointer;
+    }
+}
+
+.search_result_box {
+    background: $white;
+    background: #fff;
+    width: calc(94% / 3);
+    margin: 10px 10px 5px 5px;
+    border-radius: 15px;
+
+    @media #{$query1199} {
+        width: calc(92% / 3);
+    }
+
+    @media #{$query767} {
+        width: 45%;
+    }
+
+    @media #{$query479} {
+        width: 100%;
+    }
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    &>.w-100 {
+        padding: 15px;
+        position: relative;
+        height: 100%;
+
+        .btn_aqua {
+            @media #{$query479} {
+                padding: 8px 10px;
+                margin: 7px 0 0;
+                width: 100%;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .thumbnail {
+        background-size: cover;
+        background-position: center center;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        @media #{$query576} {
+            width: 100%;
+            background-position: center top;
+        }
+
+        img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    }
+
+    .u_name {
+        font-size: 20px;
+        color: $blue_dark;
+        font-weight: bold;
+        display: inline-block
+    }
+
+    .profession {
+        font-size: 15px;
+        color: #ff0000;
+        margin-top: -3px;
+    }
+
+    .follow_btns {
+        padding-top: 65px;
+
+        @media #{$query767} {
+            padding-top: 110px;
+        }
+
+        .following_status {
+            text-align: right;
+            position: absolute;
+            bottom: 18px;
+            left: 0;
+            right: 0;
+
+            @media #{$query767} {
+                text-align: left;
+                margin: 7px 0px 0 0;
+            }
+
+            a {
+                min-width: 110px;
+                text-align: center;
+                margin-bottom: 3px;
+
+                @media #{$query1199} {
+                    display: inline-block;
+                    padding: 8px 30px !important;
+                }
+
+                @media #{$query991} {
+                    min-width: inherit;
+                }
+
+                @media #{$query767} {
+                    width: 90%;
+                    margin: auto;
+                    display: inline-block;
+                    margin: 4px 0;
+                }
+
+                @media #{$query576} {
+                    padding: 8px 15px !important;
+                    min-height: 33px;
+                }
+
+                @media #{$query479} {
+                    padding: .4rem 0.6rem .3rem 0.6rem;
+                    min-width: 100px;
+                }
+
+
+
+            }
+        }
+    }
+
+    .text-content {
+        padding: 10px 0px;
+    }
+
+    .following_status>a {
+        @media #{$query767} {
+            padding: 0 !important;
+            width: 100%;
+            margin: 5px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+}
+
+.search_tabs.nav-tabs {
+    border: 1px solid #f1f1f1;
+    margin: 15px 0;
+    @include borderRadius(4px);
+
+    li {
+        width: 50%;
+
+        a {
+            padding: 0.25rem 1.5rem;
+            width: 100%;
+            text-align: center;
+            border-bottom: 0px;
+            color: $black;
+            font-size: 14px;
+
+            &.active,
+            &:hover {
+                border-bottom: 0px;
+                background: rgb(251, 251, 251);
+                /* Old browsers */
+                background: -moz-linear-gradient(top, rgba(251, 251, 251, 1) 0%, rgba(246, 246, 246, 1) 100%);
+                /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(251, 251, 251, 1) 0%, rgba(246, 246, 246, 1) 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(251, 251, 251, 1) 0%, rgba(246, 246, 246, 1) 100%);
+                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#f6f6f6', GradientType=0);
+                /* IE6-9 */
+            }
+        }
+    }
+}
+
+.search_bg {
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: -15px;
+
+    h2 {
+        color: #fff;
+    }
+}
+
+.search_breacrumbs {
+    padding: 15px 0;
+    background: #fff;
+    margin-bottom: 15px;
+
+    a {
+        color: $pink_medium;
+    }
+
+    span {
+        span {
+            color: #b62e65;
+
+        }
+
+    }
+}
+.all_friends{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack:  space-between;
+    justify-content:  space-between;
+}
+.searches-category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    ul {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        li {
+            background-color: #fff;
+            padding: 5px 31px;
+            list-style: none;
+            margin: 5px 5px;
+            border-radius: 25px;
+
+            a {
+                color: #afaeae;
+            }
+        }
+    }
+
+    @media #{$query400} {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+
+}

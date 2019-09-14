@@ -1,0 +1,108 @@
+.photo_media_list {
+    margin: 0 -5px;
+    @media #{$query767} {
+        margin: 0 -10px;
+    }
+    li {
+        padding: 0px 5px;
+        margin-bottom: 10px;
+        float: left;
+        position: relative;
+        width: 25%;
+        @media #{$query767} {
+            width: 33.333%;	
+            padding: 0px 5px;
+            margin-bottom: 10px;
+        }
+        @media #{$query479} {
+            width: 50%;
+        }
+    }
+}
+
+.video_media_list {
+    margin: 0 -5px;
+    @media #{$query767} {
+        margin: 0 -10px;
+    }
+    li {
+        padding: 0px 5px;
+        margin-bottom: 10px;
+        float: left;
+        position: relative;
+        width: 50%;
+        @media #{$query767} {
+            width: 33.333%;	
+            padding: 0px 5px;
+            margin-bottom: 10px;
+        }
+        @media #{$query479} {
+            width: 50%;
+        }
+        .video_box {
+            width: 100%;
+            display: flex;    
+            background-size: cover;
+            position: relative;
+            background-repeat: no-repeat;
+            border: 1px solid #e7e7e7;	
+            background-position: center center;
+            :after {
+                content: '';
+                padding-bottom: 100%;
+            }
+        }
+    }
+}
+
+
+.audio_media_list {
+    margin: 0 -5px;
+    @media #{$query767} {
+        margin: 0 -10px;
+    }
+    li {
+        padding: 0px 5px;
+        margin-bottom: 10px;
+        float: left;
+        position: relative;
+        width: 50%;
+        @media #{$query767} {
+            width: 33.333%;	
+            padding: 0px 5px;
+            margin-bottom: 10px;
+        }
+        @media #{$query479} {
+            width: 50%;
+        }
+        .audio_box {
+            background-color: #f1f3f4;
+            height: 54px;
+            position: relative;
+            width: 100%;
+
+            audio {
+                width: 100%;
+            }
+        }
+    }
+    .audio_media_box {
+        @media #{$query1199} {
+            height: 150px;
+        }
+    }
+}
+
+.photo_media_list i,
+.video_media_list i,
+.audio_media_list i {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    color: #f00;
+    background-color: $white;
+    @include borderRadius(50%);
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 2;
+}

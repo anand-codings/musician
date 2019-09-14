@@ -1,0 +1,347 @@
+/***************************************************************************
+                            Login Page Style
+***************************************************************************/
+.loginpage {
+    background-image: url('../../images/header_banner.jpg');
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 50px;
+
+    .login_pageheader {
+        margin-bottom: 25px;
+    }
+
+    @media #{$query767} {
+        padding: 30px 0px;
+    }
+
+    @include flex();
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(115deg, rgba(88, 36, 138, 0.5), rgba(182, 46, 101, 0.5));
+        background: -webkit-linear-gradient(115deg, rgba(88, 36, 138, 0.5), rgba(182, 46, 101, 0.5));
+        background: -moz-linear-gradient(115deg, rgba(88, 36, 138, 0.5), rgba(182, 46, 101, 0.5));
+        background: -ms-linear-gradient(115deg, rgba(88, 36, 138, 0.5), rgba(182, 46, 101, 0.5));
+        background: -o-linear-gradient(115deg, rgba(88, 36, 138, 0.5), rgba(182, 46, 101, 0.5));
+    }
+
+    .login_box {
+        border-radius: 10px;
+        overflow: hidden;
+        @include flex();
+
+        @media #{$query767} {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .login_box>div {
+        width: 50%;
+
+        @media #{$query767} {
+            width: 100%;
+        }
+    }
+
+    .l_l_side {
+        background-image: url('../../images/login-bg.jpg');
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+        padding: 50px;
+
+        @media #{$query991} {
+            padding: 20px 30px;
+        }
+
+        @media #{$query767} {
+            padding: 20px 20px;
+        }
+
+        @include flex();
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            left: 0px;
+            top: 0px;
+            background: linear-gradient(125deg, rgba(102, 51, 153, 0.75), rgba(182, 46, 101, 0.75) 75%);
+            background: -moz-linear-gradient(125deg, rgba(102, 51, 153, 0.75), rgba(182, 46, 101, 0.75) 75%);
+            background: -webkit-linear-gradient(125deg, rgba(102, 51, 153, 0.75), rgba(182, 46, 101, 0.75) 75%);
+            background: -ms-linear-gradient(125deg, rgba(102, 51, 153, 0.75), rgba(182, 46, 101, 0.75) 75%);
+            background: -o-linear-gradient(125deg, rgba(102, 51, 153, 0.75), rgba(182, 46, 101, 0.75) 75%);
+        }
+
+        >div {
+            align-self: flex-end;
+            -webkit-align-self: flex-end;
+        }
+
+        h3 {
+            font-size: 35px;
+            color: $white;
+            font-weight: bold;
+
+            @media #{$query767} {
+                font-size: 25px;
+            }
+        }
+
+        p {
+            color: $white;
+        }
+
+        .btn {
+            color: #09031c;
+            font-weight: 600;
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-top: 30px;
+
+            @media #{$query767} {
+                margin-top: 15px;
+            }
+
+            @media #{$query479} {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+    }
+
+    .l_r_side {
+        padding: 40px 60px;
+        background-color: $white;
+
+        @media #{$query1199} {
+            padding: 40px 50px;
+        }
+
+        @media #{$query991} {
+            padding: 20px 30px;
+        }
+
+        @media #{$query767} {
+            padding: 20px 20px;
+        }
+
+        .form-group {
+            @media #{$query991} {
+                margin-bottom: 12px;
+            }
+
+            @media #{$query767} {
+                margin-bottom: 7px;
+            }
+        }
+
+        .form-control {
+            font-size: 15px;
+            height: 42px;
+        }
+    }
+}
+
+.login_title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media #{$query767} {
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 35px;
+        font-weight: bold;
+        color: #2b2b2b;
+
+        @media #{$query991} {
+            font-size: 30px;
+            margin-bottom: 2px;
+        }
+
+        @media #{$query767} {
+            font-size: 25px;
+        }
+    }
+
+    p {
+        color: #2b2b2b;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+}
+
+.social_btns {
+    margin-bottom: 30px;
+
+    @media #{$query991} {
+        margin-bottom: 20px;
+    }
+
+    @media #{$query479} {
+        margin-bottom: 15px;
+    }
+
+    a {
+        width: 45%;
+        font-weight: 400;
+        color: $white;
+        font-size: 18px;
+
+        @media #{$query991} {
+            width: 48%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: 17px;
+        }
+
+        @media #{$query479} {
+            width: 100%;
+            padding: .525rem 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        svg {
+            width: 22px;
+            vertical-align: bottom;
+        }
+    }
+
+    .btn-gplus {
+        float: right;
+    }
+}
+
+.btn-gplus {
+    background: #dd4b39;
+}
+
+.btn-facebook {
+    background: #475993;
+}
+
+.remember_me input[type="checkbox"] {
+    vertical-align: top;
+    margin: 6px 5px 0 0;
+}
+
+.forget_password {
+    text-align: right;
+    display: block;
+    font-weight: 600;
+
+    a {
+        color: #242424;
+    }
+}
+
+.forget_password a:hover,
+.signup a:hover {
+    color: #dd4b39;
+}
+
+.signup {
+    color: #242424;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+
+    @media #{$query991} {
+        margin-top: 10px;
+    }
+
+    a {
+        color: #27bcc2;
+        font-weight: bold;
+    }
+}
+
+.btn-submit {
+    background-color: #09031c;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 40px auto 0;
+    display: block;
+    font-weight: 600;
+
+    @media #{$query991} {
+        margin: 20px auto 0;
+    }
+
+    @media #{$query767} {
+        margin-top: 30px;
+    }
+}
+
+.spaceforget_password {
+    height: 10rem;
+
+    @media #{$query767} {
+        height: 0rem;
+    }
+}
+
+.spacereset_password {
+    height: 6rem;
+
+    @media #{$query767} {
+        height: 0rem;
+    }
+}
+
+.signup_user_bg {
+    background-image: url("../../images/login-bg.jpg");
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 50px;
+    background-repeat: no-repeat;
+
+    .sign_up {
+        .l_r_side {
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+
+        }
+
+        .l_l_side {
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+
+            &:after {
+                background: transparent;
+            }
+        }
+
+        button {
+            border-radius: 25px;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

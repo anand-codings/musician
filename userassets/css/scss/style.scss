@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2019, 12:07:59 PM
+    Author     : user
+*/
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+@import 'header/header';
+@import 'homepage/home';
+@import 'footer/footer';
+
+@import 'pages/invitationpage';
+@import 'pages/timeline';
+@import 'pages/login';
+@import 'pages/search';
+@import 'pages/chatpage';
+@import 'pages/statistics';
+@import 'pages/events';
+@import 'pages/profile';
+@import 'pages/reviews';
+@import 'pages/gigsandgroups';
+@import 'pages/profilemedia';
+@import 'pages/followers';
+@import 'pages/groupdetail';
+@import 'pages/icons';
+@import 'pages/search_results';

@@ -1,0 +1,51 @@
+.invitation_page {
+    padding: 40px;
+    text-align: center;
+
+    .invitation_image {
+        margin-bottom: 30px;
+        img {
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+    .text {
+        h3, p {
+            @extend %openSansfontfamily;
+        }
+        h3 {
+            color: #585858;
+        }
+        p {
+            color: #9e9e9e;
+        }
+    }
+    .social_invitations {
+        max-width: 400px;
+        margin: 0 auto 15px auto;
+        width: 100%;
+        display: block;
+        #social-links {
+            li {
+                float: none;
+                display: inline-block;
+                a {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+.invitation_form {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+    .btn {
+        background: $pink_medium;
+        color: $white;
+        margin-top: 10px;
+    }
+    .form-control {
+        height: 45px;
+    }
+}

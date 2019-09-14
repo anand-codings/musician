@@ -1,0 +1,531 @@
+.opensidemenu {
+    .sidebar {
+        @media #{$query991} {
+            left: 0%;
+        }
+    }
+}
+
+.sidebar {
+    @include transition(left 0.45s ease-in-out);
+    background-color: $white;
+
+    @media #{$query991} {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 280px;
+        overflow: auto;
+        z-index: 10000;
+        left: -100%;
+        background-color: $white;
+        height: 100%;
+    }
+
+    .sidebar__inner {
+        background-color: $white;
+    }
+}
+
+.icon_side_close,
+.search_side_close {
+    z-index: 5;
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    @include transform(rotate(45deg));
+
+    @media #{$query991} {
+        display: block;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background: #b62e65;
+        margin: 0;
+        padding: 0;
+    }
+
+    &:before {
+        display: block;
+        width: 3px;
+        height: 25px;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    &:after {
+        height: 3px;
+        width: 25px;
+        left: 0px;
+        top: 50%;
+        margin-top: -1.5px;
+    }
+}
+
+.mCSB_inside>.mCSB_container {
+    margin-right: 15px;
+}
+
+.user_info {
+    border-bottom: 1px solid #f0f2ef;
+    position: relative;
+
+    >a {
+        font-size: 14px;
+    }
+
+    .info-box {
+        text-align: center;
+        padding: 15px 15px 10px 15px;
+    }
+
+    .dropdown_user {
+        display: none;
+        background-color: #f5f5f5;
+        margin-bottom: 7px;
+
+        @media #{$query991} {
+            width: 100%;
+        }
+
+        ul li a {
+            padding: 10px 15px 10px 15px;
+            border-bottom: 1px solid #e4e6e3;
+
+            i {
+                color: #000;
+            }
+        }
+    }
+
+    h4 {
+        color: #181818;
+
+        @media #{$query991} {
+            font-size: 17px;
+            text-align: left;
+            position: relative;
+        }
+
+        i {
+            display: none;
+
+            @media #{$query991} {
+                margin-left: 7px;
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                margin-top: -7px;
+                display: inline-block;
+            }
+
+            &.fa-caret-up {
+                @media #{$query991} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .edit_profile_btn {
+        @media #{$query991} {
+            display: none;
+        }
+    }
+
+    &.show {
+        .fa-caret-up {
+            @media #{$query991} {
+                display: block;
+            }
+        }
+
+        .fa-caret-down {
+            @media #{$query991} {
+                display: none;
+            }
+        }
+
+        .dropdown_user {
+            @media #{$query991} {
+                display: block;
+            }
+        }
+    }
+}
+
+.timeline_nav {
+    li {
+        position: relative;
+
+        svg {
+            width: 19px;
+            height: 17px;
+            margin-right: 8px;
+        }
+
+        &.active svg,
+        &:hover svg {
+            fill: $white;
+        }
+
+        &.active a,
+        &:hover a {
+            background-color: #181818;
+            color: $white;
+            font-weight: 600;
+
+            &.create_link {
+                background: transparent;
+                color: $white;
+                font-weight: normal;
+            }
+        }
+
+        .badge {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -10px;
+            background-color: #ff8441;
+            color: $white;
+
+            &.badge-gradient {
+                background: linear-gradient(-58deg, #b62e65, #58248a);
+                background: -moz-linear-gradient(-58deg, #b62e65, #58248a);
+                background: -webkit-linear-gradient(-58deg, #b62e65, #58248a);
+                background: -ms-linear-gradient(-58deg, #b62e65, #58248a);
+                background: -o-linear-gradient(-58deg, #b62e65, #58248a);
+            }
+        }
+    }
+
+    a {
+        @include flex();
+        padding: 8px 15px 8px 10px;
+        color: #181818;
+        border-bottom: 1px solid #f0f2ef;
+        position: relative;
+        font-size: 16px;
+        @include align-items(center);
+
+        .s_icon {
+            position: absolute;
+            right: calc(100% - 35px);
+        }
+
+        &.create_link {
+            position: absolute;
+            background: transparent;
+            color: #27bcc2;
+            right: 10px;
+            top: 50%;
+            margin-top: -12px;
+            padding: 0px;
+            border-bottom: none;
+        }
+    }
+
+}
+
+.mobile_menu_overlay,
+.search_menu_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none;
+}
+
+/****************************************************
+                Invitation Box
+****************************************************/
+.sidebar_block {
+    background-color: $white;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .title {
+        font-weight: 600;
+        color: #858585;
+        margin-bottom: 14px;
+
+        a {
+            float: right;
+            color: $blue_dark;
+            font-size: 14px;
+        }
+    }
+}
+
+.invite_form_widget {
+    position: relative;
+    margin-top: 15px;
+
+    .form-control {
+        @include borderRadius(0px);
+        height: 35px;
+        border: 1px solid #eaeaea;
+        font-size: 14px;
+    }
+
+    .btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: #fafafa;
+        color: #5f5f5f;
+        padding: 0 10px;
+        border: 1px solid #eaeaea;
+        height: 100%;
+        @include borderRadius(0px);
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+.suggested_people_list {
+    @extend %noListStyle;
+
+    li {
+        border-bottom: 1px solid #f7f8f7;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+
+        &:last-child {
+            border-bottom: 0px solid #f7f8f7;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .image {
+        margin-right: 10px;
+    }
+
+    .name {
+        font-weight: bold;
+        color: $blue_dark;
+    }
+
+    .followers_name {
+        color: #b2b2b2;
+        margin: 0px;
+        font-size: 14px;
+
+        a {
+            color: #434343;
+        }
+    }
+
+    .btns_group {
+        margin-top: 5px;
+
+        a {
+            border: 1px solid #eaeaea;
+            background-color: #fafafa;
+            display: inline-block;
+            padding: 2px 5px;
+            @include borderRadius(15px);
+            color: #4f4f4f;
+            font-size: 14px;
+            max-width: 83px;
+            text-align: center;
+            width: 100%;
+            font-weight: 600;
+
+            &:hover {
+                background-color: #f0f2ef;
+            }
+
+            svg {
+                display: inline-block;
+                margin: 2px 0px 0 0;
+            }
+        }
+    }
+}
+
+.trending_tags {
+    a {
+        display: inline-block;
+        border: 1px solid #eaeaea;
+        padding: 4px 10px;
+        @include borderRadius(15px);
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #4f4f4f;
+
+        &:hover {
+            background: #f0f2ef;
+        }
+    }
+}
+
+.invitation_box {
+    .medias {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        @include flex();
+        @include align-items(center);
+
+        .invitation_link a {
+            background-color: #f2f2f2;
+            color: #5f5f5f;
+            display: block;
+            @include borderRadius(15px);
+            padding: 3px 13px;
+            font-size: 14px;
+        }
+    }
+}
+
+.social_invitations_wrap {
+    @include flex();
+}
+
+.social_invitations {
+    #social-links {
+        li {
+            &:nth-child(1) a {
+                color: #3b5998;
+            }
+
+            &:nth-child(2) a {
+                color: #1da1f2;
+            }
+
+            &:nth-child(3) a {
+                color: #25D366;
+            }
+
+            &:nth-child(4) a {
+                color: #d34836;
+            }
+
+            a {
+                height: auto;
+                width: auto;
+                line-height: inherit;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.copyright_timeline {
+    text-align: center;
+    font-size: 14px;
+    color: #5f5f5f;
+    margin-bottom: 7px;
+
+    a {
+        color: #5f5f5f;
+    }
+}
+
+.sidebar_search .submit_btn {
+    background: #b62e65;
+    right: 0px;
+    top: 0px;
+    border: 0px;
+    color: #fff;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 10px 10px 0px;
+    border-radius: 0 7px 7px 0;
+    -moz-border-radius: 0 7px 7px 0;
+    -webkit-border-radius: 0 7px 7px 0;
+    -ms-border-radius: 0 7px 7px 0;
+    -o-border-radius: 0 7px 7px 0;
+}
+
+.sidebar_search {
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+
+    .loc_input {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+
+    }
+}
+
+.sidebar_search input[type="text"] {
+    border: 1px solid #ddd;
+    font-size: 15px;
+    width: 100%;
+    padding: 0 10px;
+    height: 40px;
+    margin: 10px 0 10px 0px;
+}
+
+.sidebar_widgets {
+    h6 {
+        color: $pink_medium;
+        margin: 6px 0;
+    }
+
+    .gallary_widget {
+        ul {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                list-style: none;
+                width: calc(100% / 3);
+                width: 50px;
+                height: 60px;
+                overflow: hidden;
+                width: calc(100% / 3.2);
+                margin: 2px 2px;
+                border-radius: 5px;
+                position:relative;
+
+                img {
+                    width: 100%;
+                    height: 100%
+                }
+                .friends_name{
+                    position: absolute;
+                    bottom: 0;
+                    /* background-color: #000; */
+                    width: 100%;
+                    left: 0;
+                    box-shadow: inset 0 4px 40px 1px #00000082;
+                    height: 100%;
+
+                    h6{
+                        color: #fff;
+                        font-size: 10px;
+                        display: flex;
+                        align-items: flex-end;
+                        height: 100%;
+                        margin: 0;
+                        padding: 5px;
+                    }
+                }
+                
+            }
+
+        }
+        
+    }
+}
